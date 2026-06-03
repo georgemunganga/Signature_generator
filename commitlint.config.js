@@ -17,6 +17,7 @@ export default {
         'style',
         'test',
         'types',
+        'ci',
       ],
     ],
   },
