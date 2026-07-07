@@ -5,7 +5,7 @@ import { useHeaderPreview } from './composables'
 
 const { openDialog } = useHeaderPreview()
 
-const { getSignatures, selectedId, signatureRaw, updateSignature } = useSignatures()
+const { installed } = useSignatures()
 const { gtag } = useGtag()
 
 const firstFiled = ref()
@@ -17,7 +17,7 @@ const localName = ref()
 
 const name = computed({
   get() {
-    return signatureRaw.value?.name
+    return installed.value.label
   },
   set(value) {
     localName.value = value
@@ -27,10 +27,7 @@ const name = computed({
 async function onSave() {
   isPending.value = true
   try {
-    await updateSignature(selectedId.value!, {
-      name: localName.value.trim(),
-    })
-    await getSignatures()
+    installed.value.label = localName.value.trim()
     openDialog.value = false
 
     gtag('event', 'rename_signature', {

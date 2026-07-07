@@ -3,6 +3,7 @@
   "type": "module",
   "version": "2.0.0",
   "private": true,
+  "packageManager": "npm@10.9.8",
   "description": "An open-source email signature generator for Gmail, Outlook, Apple Mail, etc.",
   "author": {
     "name": "Anton Reshetov",

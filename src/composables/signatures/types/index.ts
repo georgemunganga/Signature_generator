@@ -30,21 +30,10 @@ export interface AddonCTA {
 }
 
 export type AddonValue
-  = | string
-    | AddonBanner
-    | AddonMobileApp
-    | AddonVideoConference
-    | AddonCTA
-    | AddonLogo
+  = string | AddonBanner | AddonMobileApp | AddonVideoConference | AddonCTA | AddonLogo
 
 export type Addon
-  = | 'banner'
-    | 'disclaimer'
-    | 'hangouts'
-    | 'videoConference'
-    | 'mobileApp'
-    | 'cta'
-    | 'logo'
+  = 'banner' | 'disclaimer' | 'hangouts' | 'videoConference' | 'mobileApp' | 'cta' | 'logo'
 
 export type Basic = 'text' | 'link' | 'email' | 'phone' | 'image'
 export type AvatarShape = 'square' | 'round' | 'rounded-corner'
@@ -133,6 +122,11 @@ export interface SocialToolValue {
 export interface SocialTool {
   icon: Social
   label: string
+  value: string
+}
+
+export interface AnalyticsItem {
+  name: string
   value: string
 }
 
