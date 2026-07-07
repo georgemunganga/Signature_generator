@@ -21,7 +21,7 @@ export const attributes = {
           { label: 'Arial', value: 'Arial, Helvetica, sans-serif' },
           { label: 'Comic Sans MS', value: '\'Comic Sans MS\', sans-serif' },
           { label: 'Lucida Grande', value: '\'Lucida Grande\', sans-serif' },
-          { label: 'Poppins', value: 'Poppins, Arial, Helvetica, sans-serif' },
+          { label: 'Poppins', value: '\'Poppins\', Arial, Helvetica, sans-serif' },
           { label: 'Tahoma', value: 'Tahoma, sans-serif' },
           { label: 'Trebuchet MS', value: '\'Trebuchet MS\', sans-serif' },
           { label: 'Verdana', value: 'Verdana, sans-serif' },
