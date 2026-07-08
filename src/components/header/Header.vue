@@ -1,21 +1,33 @@
 <script setup lang="ts">
+import { useBranding } from '@/composables/useBranding'
+import { normalizeUrl } from '@/utils'
+
 const open = ref(false)
+const { logoLink, logoUrl } = useBranding()
+
+const headerLogo = computed(() => logoUrl.value || '/logo.svg')
+const headerLogoLink = computed(() =>
+  normalizeUrl(logoLink.value || 'https://www.mightyfinance.co.zm'),
+)
 </script>
 
 <template>
   <div
     data-header
-    class="p-3 pr-6 flex justify-between"
+    class="flex items-center justify-between bg-white/95 px-4 py-3 pr-6 shadow-xs"
   >
-    <RouterLink to="/basic">
-      <div class="w-[var(--sidebar-width)]">
-        <img
-          src="/logo.svg"
-          alt="MySigMail"
-          class="w-[59px] dark:invert"
-        >
-      </div>
-    </RouterLink>
+    <a
+      :href="headerLogoLink"
+      target="_blank"
+      rel="noreferrer"
+      class="flex w-[var(--sidebar-width)] items-center"
+    >
+      <img
+        :src="headerLogo"
+        alt="Company logo"
+        class="max-h-8 max-w-[64px] object-contain"
+      >
+    </a>
     <div class="flex items-center gap-6">
       <UiDialog v-model:open="open">
         <UiDialogTrigger>
@@ -48,7 +60,6 @@ const open = ref(false)
           </div>
         </UiDialogContent>
       </UiDialog>
-      <HeaderColorMode />
     </div>
   </div>
 </template>

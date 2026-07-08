@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import { useBranding } from '@/composables/useBranding'
 import { normalizeUrl } from '@/utils'
 
 const { installed } = useSignatures()
+const { logoLink, logoUrl } = useBranding()
 
 const PURPLE = '#663092'
 
@@ -20,8 +22,11 @@ const address = computed(() => {
 })
 const addressLines = computed(() => address.value.split('\n'))
 const website = computed(() => {
-  const value = fieldByLabel.value.website || 'https://www.mightyfinance.co.zm'
+  const value = logoLink.value || fieldByLabel.value.website || 'https://www.mightyfinance.co.zm'
   return value.replace(/^https?:\/\//, '').replace(/\/$/, '')
+})
+const companyLogo = computed(() => {
+  return logoUrl.value || 'https://signature-generator-tau.vercel.app/assets/mighty-fin-logo.png'
 })
 </script>
 
@@ -179,7 +184,7 @@ const website = computed(() => {
           style="width: 158px; height: 157px; padding: 0"
         >
           <img
-            src="https://signature-generator-tau.vercel.app/assets/mighty-fin-logo.png"
+            :src="companyLogo"
             alt="mighty fin"
             width="157"
             style="display: block; width: 157px; max-width: 157px; border: 0"

@@ -3,7 +3,7 @@
 <template>
   <div
     data-sidebar
-    class="flex flex-col justify-between"
+    class="flex flex-col justify-between bg-white"
   >
     <SidebarNav />
   </div>

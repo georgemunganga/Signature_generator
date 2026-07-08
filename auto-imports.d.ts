@@ -56,6 +56,7 @@ declare global {
   const triggerRef: typeof import('vue').triggerRef
   const unref: typeof import('vue').unref
   const useAttrs: typeof import('vue').useAttrs
+  const useBranding: typeof import('./src/composables/useBranding').useBranding
   const useCopySignature: typeof import('./src/composables/useCopySignature').useCopySignature
   const useCssModule: typeof import('vue').useCssModule
   const useCssVars: typeof import('vue').useCssVars
@@ -139,6 +140,7 @@ declare module 'vue' {
     readonly triggerRef: UnwrapRef<typeof import('vue')['triggerRef']>
     readonly unref: UnwrapRef<typeof import('vue')['unref']>
     readonly useAttrs: UnwrapRef<typeof import('vue')['useAttrs']>
+    readonly useBranding: UnwrapRef<typeof import('./src/composables/useBranding')['useBranding']>
     readonly useCopySignature: UnwrapRef<typeof import('./src/composables/useCopySignature')['useCopySignature']>
     readonly useCssModule: UnwrapRef<typeof import('vue')['useCssModule']>
     readonly useCssVars: UnwrapRef<typeof import('vue')['useCssVars']>

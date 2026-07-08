@@ -1,5 +1,6 @@
 import UilBrushAlt from '~icons/uil/brush-alt'
 import UilCreateDashboard from '~icons/uil/create-dashboard'
+import UilImage from '~icons/uil/image'
 import UilPostcard from '~icons/uil/postcard'
 import UilTwitterAlt from '~icons/uil/twitter-alt'
 import UilUserCircle from '~icons/uil/user-circle'
@@ -29,5 +30,10 @@ export const main = [
     name: 'Templates',
     path: '/templates',
     icon: UilPostcard,
+  },
+  {
+    name: 'Branding',
+    path: '/branding',
+    icon: UilImage,
   },
 ]

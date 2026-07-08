@@ -37,6 +37,14 @@ const routes = [
     },
   },
   {
+    path: '/branding',
+    component: () => import('@/views/Branding.vue'),
+    meta: {
+      title: 'Branding',
+      description: 'Customize the app logo, company logo, and destination link.',
+    },
+  },
+  {
     path: '/:pathMatch(.*)*',
     redirect: '/basic',
   },

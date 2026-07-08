@@ -5,6 +5,8 @@ import 'vue-sonner/style.css'
 const { init } = useSignatures()
 
 onMounted(() => {
+  document.documentElement.classList.remove('dark')
+  localStorage.setItem('vueuse-color-scheme', 'light')
   init()
 })
 </script>
