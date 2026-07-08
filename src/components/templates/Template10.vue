@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { normalizeUrl } from '@/utils'
 
-const { installed, options } = useSignatures()
+const { installed } = useSignatures()
 
-const PURPLE = '#653398'
+const PURPLE = '#663092'
 
 const fieldByLabel = computed(() => {
   return installed.value.tools.basic.reduce<Record<string, string>>((acc, field) => {
@@ -31,10 +31,10 @@ const website = computed(() => {
     cellspacing="0"
     border="0"
     role="presentation"
-    width="1161"
+    width="660"
     style="
-      width: 1161px;
-      height: 331px;
+      width: 660px;
+      height: 188px;
       border-collapse: collapse;
       border-spacing: 0;
       background: #ffffff;
@@ -44,10 +44,10 @@ const website = computed(() => {
     <tbody>
       <tr>
         <td
-          width="704"
-          height="331"
+          width="416"
+          height="188"
           valign="top"
-          style="width: 704px; height: 331px; padding: 34px 0 0 92px; box-sizing: border-box"
+          style="width: 416px; height: 188px; padding: 24px 0 0 52px; box-sizing: border-box"
         >
           <table
             cellpadding="0"
@@ -60,12 +60,12 @@ const website = computed(() => {
               <tr>
                 <td
                   style="
-                    padding: 0 0 22px 0;
+                    padding: 0 0 16px 0;
                     font-family: 'Poppins', Arial, Helvetica, sans-serif;
-                    font-size: 42px;
+                    font-size: 24px;
                     line-height: 1;
                     font-weight: 400;
-                    color: #653398;
+                    color: #663092;
                     letter-spacing: 0;
                   "
                 >
@@ -75,12 +75,12 @@ const website = computed(() => {
               <tr>
                 <td
                   style="
-                    padding: 0 0 20px 0;
+                    padding: 0 0 13px 0;
                     font-family: 'Poppins', Arial, Helvetica, sans-serif;
-                    font-size: 31px;
+                    font-size: 18px;
                     line-height: 1;
                     font-weight: 500;
-                    color: #f8b611;
+                    color: #ffc00e;
                     letter-spacing: 0;
                   "
                 >
@@ -101,12 +101,12 @@ const website = computed(() => {
                         <td
                           valign="top"
                           style="
-                            padding: 0 18px 8px 4px;
+                            padding: 0 10px 8px 2px;
                             font-family: 'Poppins', Arial, Helvetica, sans-serif;
-                            font-size: 31px;
+                            font-size: 18px;
                             line-height: 1;
                             font-weight: 700;
-                            color: #653398;
+                            color: #663092;
                           "
                         >
                           P:
@@ -116,7 +116,7 @@ const website = computed(() => {
                           style="
                             padding: 0 0 8px 0;
                             font-family: 'Poppins', Arial, Helvetica, sans-serif;
-                            font-size: 31px;
+                            font-size: 18px;
                             line-height: 1;
                             font-weight: 400;
                             color: #242124;
@@ -134,12 +134,12 @@ const website = computed(() => {
                         <td
                           valign="top"
                           style="
-                            padding: 0 18px 0 4px;
+                            padding: 0 10px 0 2px;
                             font-family: 'Poppins', Arial, Helvetica, sans-serif;
-                            font-size: 31px;
+                            font-size: 18px;
                             line-height: 1;
                             font-weight: 700;
-                            color: #653398;
+                            color: #663092;
                           "
                         >
                           A:
@@ -149,7 +149,7 @@ const website = computed(() => {
                           style="
                             padding: 0;
                             font-family: 'Poppins', Arial, Helvetica, sans-serif;
-                            font-size: 31px;
+                            font-size: 18px;
                             line-height: 1.35;
                             font-weight: 400;
                             color: #242124;
@@ -172,27 +172,27 @@ const website = computed(() => {
           </table>
         </td>
         <td
-          width="360"
-          height="331"
+          width="190"
+          height="188"
           valign="middle"
           align="center"
-          style="width: 360px; height: 331px; padding: 0"
+          style="width: 190px; height: 188px; padding: 0"
         >
           <img
             src="https://signature-generator-tau.vercel.app/assets/mighty-fin-logo.png"
             alt="mighty fin"
-            width="333"
-            style="display: block; width: 333px; max-width: 333px; border: 0"
+            width="189"
+            style="display: block; width: 189px; max-width: 189px; border: 0"
           >
         </td>
         <td
-          width="97"
-          height="331"
+          width="54"
+          height="188"
           valign="middle"
           align="center"
           :style="{
-            width: '97px',
-            height: '331px',
+            width: '54px',
+            height: '188px',
             padding: '0',
             background: PURPLE,
           }"
@@ -203,8 +203,8 @@ const website = computed(() => {
               display: 'inline-block',
               color: '#ffffff',
               textDecoration: 'none',
-              fontFamily: options.fontFamily,
-              fontSize: '18px',
+              fontFamily: '\'Poppins\', Arial, Helvetica, sans-serif',
+              fontSize: '9.5px',
               lineHeight: '1',
               fontWeight: '700',
               letterSpacing: '0',

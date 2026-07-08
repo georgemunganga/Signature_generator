@@ -184,9 +184,9 @@ export function useTemplateData() {
         basic: MIGHTY_FINANCE_BASIC,
         options: {
           ...DEFAULTS.options,
-          mainColor: '#653398',
-          secondaryColor: '#f8b611',
-          bgColor: '#653398',
+          mainColor: '#663092',
+          secondaryColor: '#ffc00e',
+          bgColor: '#663092',
           fontFamily: '\'Poppins\', Arial, Helvetica, sans-serif',
           fontSize: 12,
         },
