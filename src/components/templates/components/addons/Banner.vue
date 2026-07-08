@@ -15,8 +15,6 @@ defineProps<Props>()
 
 const { getAddonValue } = useSignatures()
 
-const DEFAULT_BANNER_IMAGE = `/assets/mysigmail-promo-banner.png`
-
 const banner = computed(() => getAddonValue<AddonBanner>('banner'))
 </script>
 
@@ -32,7 +30,8 @@ const banner = computed(() => getAddonValue<AddonBanner>('banner'))
           target="_blank"
         >
           <img
-            :src="banner.image || DEFAULT_BANNER_IMAGE"
+            v-if="banner.image"
+            :src="banner.image"
             alt="banner"
             :style="{ maxWidth: banner.width ? `${banner.width}%` : '100%' }"
           >

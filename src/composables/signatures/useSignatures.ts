@@ -76,7 +76,7 @@ const isSocialsEmpty = computed(() => !socials.value.length)
 const isAddonsEmpty = computed(() => !addons.value.length)
 
 const isBgColorAvailable = computed(() => {
-  const available = ['SignatureTemplate6', 'SignatureTemplate7']
+  const available = ['SignatureTemplate6', 'SignatureTemplate7', 'SignatureTemplate10']
   return available.includes(installed.value.name)
 })
 
@@ -90,6 +90,7 @@ const isSecondColorAvailable = computed(() => {
     'SignatureTemplate6',
     'SignatureTemplate8',
     'SignatureTemplate9',
+    'SignatureTemplate10',
   ]
   return available.includes(installed.value.name)
 })
