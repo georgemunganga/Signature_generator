@@ -31,10 +31,10 @@ const website = computed(() => {
     cellspacing="0"
     border="0"
     role="presentation"
-    width="660"
+    width="550"
     style="
-      width: 660px;
-      height: 188px;
+      width: 550px;
+      height: 157px;
       border-collapse: collapse;
       border-spacing: 0;
       background: #ffffff;
@@ -44,10 +44,10 @@ const website = computed(() => {
     <tbody>
       <tr>
         <td
-          width="416"
-          height="188"
+          width="347"
+          height="157"
           valign="top"
-          style="width: 416px; height: 188px; padding: 24px 0 0 52px; box-sizing: border-box"
+          style="width: 347px; height: 157px; padding: 20px 0 0 43px; box-sizing: border-box"
         >
           <table
             cellpadding="0"
@@ -60,9 +60,9 @@ const website = computed(() => {
               <tr>
                 <td
                   style="
-                    padding: 0 0 16px 0;
+                    padding: 0 0 13px 0;
                     font-family: 'Poppins', Arial, Helvetica, sans-serif;
-                    font-size: 24px;
+                    font-size: 20px;
                     line-height: 1;
                     font-weight: 400;
                     color: #663092;
@@ -75,9 +75,9 @@ const website = computed(() => {
               <tr>
                 <td
                   style="
-                    padding: 0 0 13px 0;
+                    padding: 0 0 11px 0;
                     font-family: 'Poppins', Arial, Helvetica, sans-serif;
-                    font-size: 18px;
+                    font-size: 15px;
                     line-height: 1;
                     font-weight: 500;
                     color: #ffc00e;
@@ -101,9 +101,9 @@ const website = computed(() => {
                         <td
                           valign="top"
                           style="
-                            padding: 0 10px 8px 2px;
+                            padding: 0 8px 7px 2px;
                             font-family: 'Poppins', Arial, Helvetica, sans-serif;
-                            font-size: 18px;
+                            font-size: 15px;
                             line-height: 1;
                             font-weight: 700;
                             color: #663092;
@@ -114,9 +114,9 @@ const website = computed(() => {
                         <td
                           valign="top"
                           style="
-                            padding: 0 0 8px 0;
+                            padding: 0 0 7px 0;
                             font-family: 'Poppins', Arial, Helvetica, sans-serif;
-                            font-size: 18px;
+                            font-size: 15px;
                             line-height: 1;
                             font-weight: 400;
                             color: #242124;
@@ -134,9 +134,9 @@ const website = computed(() => {
                         <td
                           valign="top"
                           style="
-                            padding: 0 10px 0 2px;
+                            padding: 0 8px 0 2px;
                             font-family: 'Poppins', Arial, Helvetica, sans-serif;
-                            font-size: 18px;
+                            font-size: 15px;
                             line-height: 1;
                             font-weight: 700;
                             color: #663092;
@@ -149,7 +149,7 @@ const website = computed(() => {
                           style="
                             padding: 0;
                             font-family: 'Poppins', Arial, Helvetica, sans-serif;
-                            font-size: 18px;
+                            font-size: 15px;
                             line-height: 1.35;
                             font-weight: 400;
                             color: #242124;
@@ -172,27 +172,27 @@ const website = computed(() => {
           </table>
         </td>
         <td
-          width="190"
-          height="188"
+          width="158"
+          height="157"
           valign="middle"
           align="center"
-          style="width: 190px; height: 188px; padding: 0"
+          style="width: 158px; height: 157px; padding: 0"
         >
           <img
             src="https://signature-generator-tau.vercel.app/assets/mighty-fin-logo.png"
             alt="mighty fin"
-            width="189"
-            style="display: block; width: 189px; max-width: 189px; border: 0"
+            width="157"
+            style="display: block; width: 157px; max-width: 157px; border: 0"
           >
         </td>
         <td
-          width="54"
-          height="188"
+          width="45"
+          height="157"
           valign="middle"
           align="center"
           :style="{
-            width: '54px',
-            height: '188px',
+            width: '45px',
+            height: '157px',
             padding: '0',
             background: PURPLE,
           }"
@@ -204,7 +204,7 @@ const website = computed(() => {
               color: '#ffffff',
               textDecoration: 'none',
               fontFamily: '\'Poppins\', Arial, Helvetica, sans-serif',
-              fontSize: '9.5px',
+              fontSize: '8px',
               lineHeight: '1',
               fontWeight: '700',
               letterSpacing: '0',
