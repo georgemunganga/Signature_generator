@@ -78,34 +78,7 @@ export function useTemplateData() {
       fontSize: 12,
       jobSeparator: '/',
     } as OptionsTool,
-    addons: [
-      {
-        label: 'Disclaimer',
-        type: 'disclaimer',
-        isNew: false,
-        value:
-          'If you like MySigMail, you can share it on social networks by telling your friends about our service and get a 20% discount coupon. To participate, follow us @mysigmail, write a tweet with a link to @mysigmail and https://mysigmail.com. Or just click on the banner above for tweet and follow us. Email us at contact@mysigmail.com about tweeting and get a coupon.',
-      },
-      {
-        label: 'Banner',
-        type: 'banner',
-        isNew: false,
-        value: {
-          image: '/assets/mysigmail-promo-banner.png',
-          link: 'https://twitter.com/intent/tweet?url=&text=Take%20a%20look%20at%20this%20awesome%20email%20signature%20generator%20%40mysigmail%20https%3A%2F%2Fmysigmail.com.',
-        },
-      },
-      {
-        label: 'Video Conference',
-        type: 'videoConference',
-        isNew: false,
-        value: {
-          text: 'Meet me on Google Hangouts',
-          type: 'hangouts',
-          link: '',
-        },
-      },
-    ] as AddonTool[],
+    addons: [] as AddonTool[],
     socials: [
       {
         icon: 'facebook',

@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import * as Base from '@/components/templates/components/base'
+import { useBranding } from '@/composables/useBranding'
+
+const { companyName } = useBranding()
 </script>
 
 <template>
@@ -9,12 +12,8 @@ import * as Base from '@/components/templates/components/base'
         valign="top"
         style="border-top: 1px solid #ddd; padding-top: 5px"
       >
-        <p style="margin: 0; font-size: 10px; font-family: Arial, sans-serif">
-          <span style="font-size: 10px; color: #888">Email signature by
-            <a
-              href="https://mysigmail.com?ref=email"
-              style="color: hsl(221.2 83.2% 53.3%)"
-            >mysigmail.com</a></span>
+        <p style="margin: 0; font-size: 10px; font-family: 'Poppins', Arial, sans-serif">
+          <span style="font-size: 10px; color: #888">Built for {{ companyName || 'your company' }}</span>
         </p>
       </td>
     </tr>

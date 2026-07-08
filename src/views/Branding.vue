@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useBranding } from '@/composables/useBranding'
 
-const { logoLink, logoUrl } = useBranding()
+const { companyName, logoLink, logoUrl } = useBranding()
 const fileInputRef = ref<HTMLInputElement>()
 
 function onChooseFile() {
@@ -35,6 +35,15 @@ function onClearLogo() {
         label-position="top"
         class="rounded-md border bg-white p-5 shadow-xs"
       >
+        <UiFieldFormItem
+          label="Company name"
+          description="Used in the app footer and as the default company identity."
+        >
+          <UiInput
+            v-model="companyName"
+            placeholder="Mighty Finance"
+          />
+        </UiFieldFormItem>
         <UiFieldFormItem
           label="Company logo"
           description="Use a public image URL for email-safe signatures, or upload an image to store it in this browser."
