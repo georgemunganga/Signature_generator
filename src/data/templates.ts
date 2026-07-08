@@ -130,7 +130,71 @@ export function useTemplateData() {
     ] as SocialTool[],
   }
 
+  const MIGHTY_FINANCE_BASIC = [
+    {
+      id: nanoid(8),
+      label: 'Avatar',
+      type: 'image',
+      main: true,
+      value: '',
+    },
+    {
+      id: nanoid(8),
+      label: 'Full Name',
+      type: 'text',
+      main: true,
+      value: 'George Munganga',
+    },
+    {
+      id: nanoid(8),
+      label: 'Job Title',
+      type: 'text',
+      main: true,
+      value: 'Chief Technology Officer',
+    },
+    {
+      id: nanoid(8),
+      label: 'Address',
+      type: 'text',
+      main: true,
+      value: 'Plot no 13, Chikuni Road,\nOff Makishi Rd, Northmead, Lusaka.',
+    },
+    {
+      id: nanoid(8),
+      label: 'Website',
+      type: 'link',
+      main: true,
+      value: 'https://www.mightyfinance.co.zm',
+    },
+    {
+      id: nanoid(8),
+      label: 'Phone',
+      type: 'phone',
+      main: true,
+      value: '+260975743472',
+    },
+  ] as BasicTool[]
+
   const templates: Template[] = [
+    {
+      name: 'SignatureTemplate10',
+      label: 'Mighty Finance',
+      isNew: true,
+      tools: {
+        basic: MIGHTY_FINANCE_BASIC,
+        options: {
+          ...DEFAULTS.options,
+          mainColor: '#653398',
+          secondaryColor: '#f8b611',
+          bgColor: '#653398',
+          fontFamily: '\'Poppins\', Arial, Helvetica, sans-serif',
+          fontSize: 12,
+        },
+        addons: [],
+        socials: [],
+      },
+      preview: 'template-10.png',
+    },
     {
       name: 'SignatureTemplate1',
       label: 'Template #1',

@@ -56,6 +56,7 @@ declare module 'vue' {
     TemplatesComponentsMainSocial: typeof import('./src/components/templates/components/main/Social.vue')['default']
     TemplatesComponentsSpecialBranding: typeof import('./src/components/templates/components/special/Branding.vue')['default']
     TemplatesTemplate1: typeof import('./src/components/templates/Template1.vue')['default']
+    TemplatesTemplate10: typeof import('./src/components/templates/Template10.vue')['default']
     TemplatesTemplate2: typeof import('./src/components/templates/Template2.vue')['default']
     TemplatesTemplate3: typeof import('./src/components/templates/Template3.vue')['default']
     TemplatesTemplate4: typeof import('./src/components/templates/Template4.vue')['default']
