@@ -284,7 +284,8 @@ function scaledPx(size: number) {
             :src="companyLogo"
             alt="mighty fin"
             width="157"
-            style="display: block; width: 157px; max-width: 157px; border: 0"
+            height="106"
+            style="display: block; width: 157px; height: 106px; max-width: 157px; border: 0"
           >
         </td>
         <td
