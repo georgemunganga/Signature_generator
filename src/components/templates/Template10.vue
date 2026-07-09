@@ -50,7 +50,6 @@ const website = computed(() => {
   const value = logoLink.value || fieldByLabel.value.website || 'https://www.mightyfinance.co.zm'
   return value.replace(/^https?:\/\//, '').replace(/\/$/, '')
 })
-const websiteCharacters = computed(() => website.value.split(''))
 const companyLogo = computed(() => {
   return logoUrl.value || '/assets/mighty-fin-logo.png'
 })
@@ -300,43 +299,18 @@ function scaledPx(size: number) {
             background: bgColor,
           }"
         >
-          <table
-            cellpadding="0"
-            cellspacing="0"
-            border="0"
-            role="presentation"
-            align="center"
-            style="border-collapse: collapse; border-spacing: 0; margin: 0 auto"
+          <a
+            :href="normalizeUrl(`https://${website}`)"
+            style="display: block; text-decoration: none"
           >
-            <tbody>
-              <tr
-                v-for="(char, index) in websiteCharacters"
-                :key="`${char}-${index}`"
-              >
-                <td
-                  align="center"
-                  style="
-                    padding: 0;
-                    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-                    font-size: 7px;
-                    line-height: 6px;
-                    font-weight: 700;
-                    color: #ffffff;
-                  "
-                  :style="{ fontFamily, fontSize: scaledPx(7) }"
-                >
-                  <a
-                    :href="normalizeUrl(`https://${website}`)"
-                    :style="{
-                      color: '#ffffff',
-                      textDecoration: 'none',
-                      fontFamily,
-                    }"
-                  >{{ char }}</a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+            <img
+              src="/assets/mighty-website-rail.png"
+              alt="www.mightyfinance.co.zm"
+              width="45"
+              height="157"
+              style="display: block; width: 45px; height: 157px; border: 0"
+            >
+          </a>
         </td>
       </tr>
     </tbody>
