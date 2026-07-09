@@ -1,5 +1,7 @@
 const { sonner } = useSonner()
 
+const PUBLIC_ORIGIN = 'https://esignatures.mightyfinance.co.zm'
+
 const html = ref('')
 const isHtmlLarge = computed(() => html.value.length > 10000)
 
@@ -82,11 +84,16 @@ function addStyle(el: HTMLElement, styles: Record<string, string>) {
 function absoluteUrl(value: string) {
   const trimmed = value.trim()
 
-  if (!trimmed || /^(?:https?:|mailto:|tel:|skype:|tg:|whatsapp:|sms:|data:|#)/i.test(trimmed))
+  if (!trimmed || /^(?:mailto:|tel:|skype:|tg:|whatsapp:|sms:|data:|#)/i.test(trimmed))
     return trimmed
 
   try {
-    return new URL(trimmed, window.location.origin).href
+    const url = new URL(trimmed, PUBLIC_ORIGIN)
+
+    if (['localhost', '127.0.0.1', '0.0.0.0'].includes(url.hostname))
+      return new URL(`${url.pathname}${url.search}${url.hash}`, PUBLIC_ORIGIN).href
+
+    return url.href
   }
   catch {
     return trimmed

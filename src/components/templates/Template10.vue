@@ -50,6 +50,7 @@ const website = computed(() => {
   const value = logoLink.value || fieldByLabel.value.website || 'https://www.mightyfinance.co.zm'
   return value.replace(/^https?:\/\//, '').replace(/\/$/, '')
 })
+const websiteCharacters = computed(() => website.value.split(''))
 const companyLogo = computed(() => {
   return logoUrl.value || '/assets/mighty-fin-logo.png'
 })
@@ -211,13 +212,13 @@ function scaledPx(size: number) {
                           "
                           :style="{ color: textColor, fontFamily, fontSize: scaledPx(15) }"
                         >
-                          <span
-                            v-for="line in addressLines"
-                            :key="line"
-                            style="display: block"
-                          >{{
-                            line
-                          }}</span>
+                          <template
+                            v-for="(line, index) in addressLines"
+                            :key="`${line}-${index}`"
+                          >
+                            <span>{{ line }}</span>
+                            <br v-if="index < addressLines.length - 1">
+                          </template>
                         </td>
                       </tr>
                       <tr
@@ -299,23 +300,43 @@ function scaledPx(size: number) {
             background: bgColor,
           }"
         >
-          <a
-            :href="normalizeUrl(`https://${website}`)"
-            :style="{
-              display: 'inline-block',
-              color: '#ffffff',
-              textDecoration: 'none',
-              fontFamily: '\'Montserrat\', Arial, Helvetica, sans-serif',
-              fontSize: scaledPx(8),
-              lineHeight: '1',
-              fontWeight: '700',
-              letterSpacing: '0',
-              writingMode: 'vertical-rl',
-              transform: 'rotate(180deg)',
-            }"
+          <table
+            cellpadding="0"
+            cellspacing="0"
+            border="0"
+            role="presentation"
+            align="center"
+            style="border-collapse: collapse; border-spacing: 0; margin: 0 auto"
           >
-            {{ website }}
-          </a>
+            <tbody>
+              <tr
+                v-for="(char, index) in websiteCharacters"
+                :key="`${char}-${index}`"
+              >
+                <td
+                  align="center"
+                  style="
+                    padding: 0;
+                    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+                    font-size: 7px;
+                    line-height: 6px;
+                    font-weight: 700;
+                    color: #ffffff;
+                  "
+                  :style="{ fontFamily, fontSize: scaledPx(7) }"
+                >
+                  <a
+                    :href="normalizeUrl(`https://${website}`)"
+                    :style="{
+                      color: '#ffffff',
+                      textDecoration: 'none',
+                      fontFamily,
+                    }"
+                  >{{ char }}</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </td>
       </tr>
     </tbody>
