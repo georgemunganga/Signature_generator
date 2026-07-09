@@ -1,6 +1,8 @@
 const { sonner } = useSonner()
 
 const PUBLIC_ORIGIN = 'https://esignatures.mightyfinance.co.zm'
+const EXPORT_PADDING_TOP = 12
+const EXPORT_PADDING_LEFT = 16
 
 const html = ref('')
 const isHtmlLarge = computed(() => html.value.length > 10000)
@@ -205,6 +207,10 @@ function normalizeElement(el: HTMLElement) {
   normalizeTextElement(el)
 }
 
+function wrapWithEmailSpacing(content: string) {
+  return `<table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse: collapse; border-spacing: 0; margin: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tbody><tr><td style="padding: ${EXPORT_PADDING_TOP}px 0 0 ${EXPORT_PADDING_LEFT}px; mso-line-height-rule: exactly;">${content}</td></tr></tbody></table>`
+}
+
 function serializeEmailHtml() {
   const slot = document.querySelector('[data-slot="signature"]')
   if (!slot)
@@ -216,7 +222,7 @@ function serializeEmailHtml() {
   normalizeElement(clone)
   clone.querySelectorAll<HTMLElement>('*').forEach(normalizeElement)
 
-  return clone.outerHTML.replace(/<!--v-if-->/g, '')
+  return wrapWithEmailSpacing(clone.outerHTML).replace(/<!--v-if-->/g, '')
 }
 
 async function checkClipboardPermission() {
