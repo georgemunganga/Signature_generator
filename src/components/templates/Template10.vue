@@ -51,7 +51,7 @@ const website = computed(() => {
   return value.replace(/^https?:\/\//, '').replace(/\/$/, '')
 })
 const companyLogo = computed(() => {
-  return logoUrl.value || 'https://signature-generator-tau.vercel.app/assets/mighty-fin-logo.png'
+  return logoUrl.value || '/assets/mighty-fin-logo.png'
 })
 
 const extraFields = computed(() => {
@@ -73,7 +73,7 @@ const secondaryColor = computed(() => options.value.secondaryColor || DEFAULT_GO
 const bgColor = computed(() => options.value.bgColor || DEFAULT_PURPLE)
 const textColor = DEFAULT_TEXT
 const fontFamily = computed(
-  () => options.value.fontFamily || '\'Poppins\', Arial, Helvetica, sans-serif',
+  () => options.value.fontFamily || '\'Montserrat\', Arial, Helvetica, sans-serif',
 )
 const fontScale = computed(() => options.value.fontSize / 12)
 
@@ -117,7 +117,7 @@ function scaledPx(size: number) {
                 <td
                   style="
                     padding: 0 0 13px 0;
-                    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+                    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
                     font-size: 20px;
                     line-height: 1;
                     font-weight: 400;
@@ -132,7 +132,7 @@ function scaledPx(size: number) {
                 <td
                   style="
                     padding: 0 0 11px 0;
-                    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+                    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
                     font-size: 15px;
                     line-height: 1;
                     font-weight: 500;
@@ -158,7 +158,7 @@ function scaledPx(size: number) {
                           valign="top"
                           style="
                             padding: 0 8px 7px 2px;
-                            font-family: 'Poppins', Arial, Helvetica, sans-serif;
+                            font-family: 'Montserrat', Arial, Helvetica, sans-serif;
                             font-size: 15px;
                             line-height: 1;
                             font-weight: 700;
@@ -171,7 +171,7 @@ function scaledPx(size: number) {
                           valign="top"
                           style="
                             padding: 0 0 7px 0;
-                            font-family: 'Poppins', Arial, Helvetica, sans-serif;
+                            font-family: 'Montserrat', Arial, Helvetica, sans-serif;
                             font-size: 15px;
                             line-height: 1;
                             font-weight: 400;
@@ -190,7 +190,7 @@ function scaledPx(size: number) {
                           valign="top"
                           style="
                             padding: 0 8px 0 2px;
-                            font-family: 'Poppins', Arial, Helvetica, sans-serif;
+                            font-family: 'Montserrat', Arial, Helvetica, sans-serif;
                             font-size: 15px;
                             line-height: 1;
                             font-weight: 700;
@@ -203,7 +203,7 @@ function scaledPx(size: number) {
                           valign="top"
                           style="
                             padding: 0;
-                            font-family: 'Poppins', Arial, Helvetica, sans-serif;
+                            font-family: 'Montserrat', Arial, Helvetica, sans-serif;
                             font-size: 15px;
                             line-height: 1.35;
                             font-weight: 400;
@@ -305,7 +305,7 @@ function scaledPx(size: number) {
               display: 'inline-block',
               color: '#ffffff',
               textDecoration: 'none',
-              fontFamily: '\'Poppins\', Arial, Helvetica, sans-serif',
+              fontFamily: '\'Montserrat\', Arial, Helvetica, sans-serif',
               fontSize: scaledPx(8),
               lineHeight: '1',
               fontWeight: '700',

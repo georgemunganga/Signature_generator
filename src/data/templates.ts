@@ -160,7 +160,7 @@ export function useTemplateData() {
           mainColor: '#663092',
           secondaryColor: '#ffc00e',
           bgColor: '#663092',
-          fontFamily: '\'Poppins\', Arial, Helvetica, sans-serif',
+          fontFamily: '\'Montserrat\', Arial, Helvetica, sans-serif',
           fontSize: 12,
         },
         addons: [],
